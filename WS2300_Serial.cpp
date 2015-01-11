@@ -18,40 +18,8 @@ Command Hex Digit       Command Hex Digit
 //Choix du port Serie en paramêtre
 WS2300_Serial::WS2300_Serial(HardwareSerial& p_serial) : _HardSerial(p_serial)
 {
-    isSoftSerialToUse=0;
 // initialize serial communications to the WS2355:
   _HardSerial.begin(2400);
-}
-
-//Choix du port Serie en paramêtre
-WS2300_Serial::WS2300_Serial(SoftSerial& p_serial)
-{
-    isSoftSerialToUse=1; 
-// initialize serial communications to the WS2355:
-	_SoftSerial = p_serial;
-}
-
-int WS2300_Serial::ReadSerial()
-{
-	if (isSoftSerialToUse)
-		return _SoftSerial.read();
-	else
-		return _HardSerial.read();
-}
-
-bool WS2300_Serial::IsSerialAvailable()
-{
-	if (isSoftSerialToUse)
-		return _SoftSerial.available();
-	else
-		return _HardSerial.available();
-}
-void WS2300_Serial::WriteSerial(byte p_byteToWrite)
-{
-	if (isSoftSerialToUse)
-		return _SoftSerial.write(p_byteToWrite);
-	else
-		return _HardSerial.write(p_byteToWrite);
 }
 
 //Tc = (5/9)*(Tf-32)

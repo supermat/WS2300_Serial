@@ -6,20 +6,15 @@
 #else
 #include "WProgram.h"
 #endif
-
-#include <SoftwareSerial.h> 
  
 class WS2300_Serial
 {
    private:
-   bool isSoftSerialToUse; // Is Soft or Hard Serial to use
-    HardwareSerial _HardSerial; // Global properties for serialv
-    SoftwareSerial _SoftSerial; // Global properties for serialv
+    HardwareSerial _HardSerial; // Global properties for serial
     String Leggi (int cmd[]); //Reads data from the weather station
  
    public:
-    WS2300_Serial(HardwareSerial& p_serial);    //Constructeur de la class
-    WS2300_Serial(SoftwareSerial & p_serial);    //Constructeur de la class
+    WS2300_Serial(HardwareSerial& serial);    //Constructeur de la class
 	String FahrenheitToCelsius(String p_TempFahrenheit);
 	String RainWS2300Tomm(String p_RainWS2300);
 	String RainWS2300ToWunderground(String p_RainWS2300);

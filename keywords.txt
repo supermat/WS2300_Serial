@@ -1,0 +1,26 @@
+#######################################
+# Syntax Coloring Map For Ultrasound
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+WS2300Serial	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+FahrenheitToCelsius	KEYWORD2
+getTime	KEYWORD2
+getDay	KEYWORD2
+getTemp	KEYWORD2
+getHum	KEYWORD2
+getPress	KEYWORD2
+getWind	KEYWORD2
+getRain	KEYWORD2
+getDew	KEYWORD2
+#######################################
+# Constants (LITERAL1)
+#######################################
+
